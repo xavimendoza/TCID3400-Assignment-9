@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title>The Daily Prophet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">The Daily Prophet</h1>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>  
+    </header>
+    <main>
+        <section class="featured-article">
+            <h2>Featured Article</h2>
+            <article>
+                <h3>The Triwizard Tournament Returns to Hogwarts</h3>
+                <p>Excitement is brewing as the Triwizard Tournament is set to make a return to Hogwarts School of Witchcraft and Wizardry. Wizards and witches from all over are eagerly anticipating the magical challenges that await. The Triwizard Tournament, a prestigious magical competition, involves three wizarding schools: Hogwarts, Beauxbatons Academy of Magic, and Durmstrang Institute. Each school selects a champion to represent them in a series of challenging and dangerous tasks. The tournament is a rare and exciting event that brings together magical communities from different parts of the wizarding world. As preparations are underway, students and staff at Hogwarts are buzzing with anticipation for this extraordinary event.</p>
+                <img src="https://img.sparknotes.com/content/sparklife/sparktalk/triwizardtournamentharryviktorcedricfleurportraits_LargeWide.jpg" alt="Triwizard Tournament Image" width="900" style="max-width: 100%;">
+            </article>
+        </section>
+        <section class="latest-news">
+            <h2>Latest News</h2>
+            <article>
+                <h3>New Potion Discovered: Elixir of Invisibility</h3>
+                <p>A breakthrough in potion-making has led to the discovery of the Elixir of Invisibility. Researchers at the Wizarding Research Institute claim that the potion renders the drinker completely invisible for a limited time. The potion is a result of years of research into the properties of magical herbs and rare ingredients. Wizards and witches are intrigued by the possibilities offered by this new potion, which could have applications in various magical fields. However, the recipe for the Elixir of Invisibility is closely guarded, and the Wizarding Ministry is taking precautions to prevent misuse. As the news of this groundbreaking discovery spreads, magical communities are abuzz with excitement and curiosity.</p>
+            </article>
+            <article>
+                <h3>Magical Creatures Symposium at the Ministry of Magic</h3>
+                <p>The Ministry of Magic is hosting a symposium on magical creatures, bringing together experts in Magizoology to discuss the latest research and discoveries. Learn about the fascinating world of magical creatures, from the majestic Hippogriff to the elusive Niffler. The symposium aims to promote understanding and conservation efforts for magical creatures in the wizarding world. Attendees will have the opportunity to interact with magical creatures, view educational presentations, and engage in discussions with leading Magizoologists. The event is open to wizards and witches of all ages who share a passion for magical creatures. Don't miss this unique opportunity to explore the wonders of the magical animal kingdom!</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us a owlpost@dailyprophet.com</p>
+    </footer>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

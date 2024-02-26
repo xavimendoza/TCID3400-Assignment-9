@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title>Newspaper landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="hamburger">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="article.html">Article</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <main class="photo-gallery">
+        <a href="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/6028af89e5abae001c525fe5-copy.jpg" target="_blank" class="photo"><img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/6028af89e5abae001c525fe5-copy.jpg" alt="The Triwizard Tournament 7"></a>
+        <a href="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/anyconv-com__bzcvfi5cuaacaem-2.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5" target="_blank" class="photo"><img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/anyconv-com__bzcvfi5cuaacaem-2.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5" alt="The Triwizard Tournament 4"></a>
+        <a href="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/hp-f4-goblet-of-fire-triwizard-champions-rita-skeeter-room-web-landscape-copy.jpeg" target="_blank" class="photo"><img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/hp-f4-goblet-of-fire-triwizard-champions-rita-skeeter-room-web-landscape-copy.jpeg" alt="The Triwizard Tournament 6"></a>
+        <a href="https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/08/Barty-Crouch-at-the-Triwizard-Tournament-in-Harry-Potter.jpg" target="_blank" class="photo"><img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/08/Barty-Crouch-at-the-Triwizard-Tournament-in-Harry-Potter.jpg" alt="The Triwizard Tournament 2"></a>
+        <a href="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/wb_f4_harryrunningthroughtriwizardmaze_hp4d-1065-copy.jpg" target="_blank" class="photo"><img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/wb_f4_harryrunningthroughtriwizardmaze_hp4d-1065-copy.jpg" alt="The Triwizard Tournament 9"></a>
+        <a href="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/portkey_wb_f4_portkeyinthemaze_still_100615_land.jpg" target="_blank" class="photo"><img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/07/portkey_wb_f4_portkeyinthemaze_still_100615_land.jpg" alt="The Triwizard Tournament 8"></a>
+    </main>
+    <div class="gallery-controls">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+        
+        const images = document.querySelectorAll('.photo');
+        let currentImageIndex = 0;
+
+        document.getElementById('prev').addEventListener('click', function() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showCurrentImage();
+        });
+
+        document.getElementById('next').addEventListener('click', function() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showCurrentImage();
+        });
+
+        function showCurrentImage() {
+            images.forEach((image, index) => {
+                image.style.display = index === currentImageIndex ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
+
+</html>
